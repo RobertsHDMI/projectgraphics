@@ -2,7 +2,7 @@ from graphics import *
 
 
 def main():
-    win = GraphWin("Draw a Triangle", 500, 400)
+    win = GraphWin("Draw a Triangle", 800, 500)
     win.setCoords(0.0, 0.0, 10.0, 10.0)
     message = Text(Point(5, 0.5), "Click on three points")
     message.draw(win)
