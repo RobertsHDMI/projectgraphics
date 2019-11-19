@@ -27,5 +27,10 @@ oval.draw(win)
 rect = Rectangle(Point(0.2, 0.2), Point(2.8, 3.5))
 rect.draw(win)
 
+# Draw a triangle using Line objects
+Line(Point(3, 0.4), Point(4, 3.5)).draw(win)
+Line(Point(4, 3.5), Point(4.8, 1.2)).draw(win)
+Line(Point(4.8, 1.2), Point(3, 0.4)).draw(win)
+
 win.getMouse()  # Pause to view result
 win.close()
