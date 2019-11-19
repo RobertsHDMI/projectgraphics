@@ -32,5 +32,14 @@ Line(Point(3, 0.4), Point(4, 3.5)).draw(win)
 Line(Point(4, 3.5), Point(4.8, 1.2)).draw(win)
 Line(Point(4.8, 1.2), Point(3, 0.4)).draw(win)
 
+# Draw triangle using Polygon object
+p1 = Point(3.1, 0.5)
+p2 = Point(4, 3.3)
+p3 = Point(4.7, 1.2)
+triangle = Polygon(p1, p2, p3)
+triangle.setFill("peachpuff")
+triangle.setOutline("cyan")
+triangle.draw(win)
+
 win.getMouse()  # Pause to view result
 win.close()
