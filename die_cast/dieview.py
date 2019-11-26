@@ -55,3 +55,37 @@ class DieView:
         self.pip1.setFill(self.background)
         self.pip2.setFill(self.background)
         self.pip3.setFill(self.background)
+        self.pip4.setFill(self.background)
+        self.pip5.setFill(self.background)
+        self.pip6.setFill(self.background)
+        self.pip7.setFill(self.background)
+
+        # turn correct pips on
+
+        if value == 1:
+            self.pip4.setFill(self.foreground)
+        elif value == 2:
+            self.pip1.setFill(self.foreground)
+            self.pip7.setFill(self.foreground)
+        elif value == 3:
+            self.pip1.setFill(self.foreground)
+            self.pip7.setFill(self.foreground)
+            self.pip4.setFill(self.foreground)
+        elif value == 4:
+            self.pip1.setFill(self.foreground)
+            self.pip3.setFill(self.foreground)
+            self.pip5.setFill(self.foreground)
+            self.pip7.setFill(self.foreground)
+        elif value == 5:
+            self.pip1.setFill(self.foreground)
+            self.pip3.setFill(self.foreground)
+            self.pip4.setFill(self.foreground)
+            self.pip5.setFill(self.foreground)
+            self.pip7.setFill(self.foreground)
+        else:
+            self.pip1.setFill(self.foreground)
+            self.pip2.setFill(self.foreground)
+            self.pip3.setFill(self.foreground)
+            self.pip5.setFill(self.foreground)
+            self.pip6.setFill(self.foreground)
+            self.pip7.setFill(self.foreground)
