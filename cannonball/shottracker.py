@@ -1,4 +1,5 @@
 from graphics import *
+from cannonball.projectile import Projectile
 
 
 class ShotTracker:
@@ -9,14 +10,14 @@ class ShotTracker:
         self.proj = Projectile(angle, velocity, height)
         self.marker = Circle(Point(0, height), 3)
         self.marker.setFill("red")
-        self.marker.set0utline("red")
+        self.marker.setOutline("red")
         self.marker.draw(win)
 
     def update(self, dt):
         """Move the shot dt seconds farther along its flight"""
 
         # update the projectile
-        self.proj.pdate(dt)
+        self.proj.update(dt)
 
         # move the circle to the new projectile location
         center = self.marker.getCenter()
