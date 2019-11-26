@@ -1,7 +1,7 @@
 from graphics import *
 
 # create a default 200x200 window
-win = GraphWin("Tic-Tac-Toe ")
+win = GraphWin("Lines")
 # set coordinates to go from (0 , 0) in the lower left
 # to (3 , 3) in the upper right .
 win.setCoords(0.0, 0.0, 10, 3)
