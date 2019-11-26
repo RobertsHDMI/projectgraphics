@@ -25,7 +25,7 @@ class Projectile:
         """Update the state of this projectile to move it time seconds farther into its flight"""
         self.xpos = self.xpos + time * self.xvel
         yvel1 = self.yvel - 9.8 * time
-        self.ypos - self.ypos + time * (self.yvel + yvel1) / 2.0
+        self.ypos = self.ypos + time * (self.yvel + yvel1) / 2.0
         self.yvel = yvel1
 
     def getY(self):
