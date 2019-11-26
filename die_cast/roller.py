@@ -3,8 +3,8 @@
 # Button and DieView .
 from random import randrange
 from graphics import GraphWin, Point
-from button import Button
-from dieview import DieView
+from die_cast.button import Button
+from die_cast.dieview import DieView
 
 
 def main():
