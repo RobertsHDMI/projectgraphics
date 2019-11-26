@@ -1,5 +1,5 @@
 from graphics import *
-
+from die_cast.button import Button
 
 class InputDialog:
     """A custom window for getting simulation values (angle, velocity,
