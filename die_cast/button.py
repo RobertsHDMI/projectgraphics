@@ -9,7 +9,6 @@ class Button:
     returns true if the button is active and p is inside it .
     """
 
-
     def __init__(self, win, center, width, height, label):
         """Creates a rectangular button , eg:
         qb = Button (myWin , centerPoint , width , height , 'Quit')"""
@@ -43,4 +42,8 @@ class Button:
         self.rect.setWidth(2)
         self.active = True
 
-
+    def deactivate(self):
+        "Sets this button to 'inactive'."
+        self.label.setFill('darkgrey')
+        self.rect.setWidth(1)
+        self.active = False
