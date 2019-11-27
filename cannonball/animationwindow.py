@@ -34,6 +34,5 @@ def main():
             shot.update(1 / 50)
             update(50)
 
-    win.close()
 
 main()
