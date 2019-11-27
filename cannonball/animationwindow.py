@@ -25,7 +25,7 @@ def main():
         inputwin.close()
 
         if choice == "Quit":  # loop exit
-            break
+            return
 
         # create a shot and track until it hits ground or leaves window
         angle, vel, height = inputwin.getValues()
