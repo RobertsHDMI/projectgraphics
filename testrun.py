@@ -18,7 +18,8 @@ sky.setFill("blue")
 sky.draw(win)
 
 for i in range(0, 100, 20):
-    # Draw a rectangle representing the sky using a Rectangle object
+    # Draw a series of polygons representing the sky using a Rectangle object, in order to fill up the space
+    # between mountains with sky
     sky = Polygon(Point(0 + i, 60), Point(20 + i, 60), Point(10 + i, 40))
     sky.setFill("blue")
     sky.setOutline("blue")
@@ -30,7 +31,7 @@ grass.setFill("green")
 grass.draw(win)
 
 for i in range(0, 120, 20):
-    # Draw a Polygon representing the mountains using a Polygon object
+    # Draw a series of Polygons representing the mountains using a Polygon object
     grass = Polygon(Point(-20 + i, 20), Point(20 + i, 20), Point(0 + i, 60))
     grass.setFill("grey")
     grass.draw(win)
