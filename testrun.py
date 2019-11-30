@@ -30,14 +30,14 @@ grass.setFill("green")
 grass.draw(win)
 
 for i in range(0, 120, 20):
-    # Draw a Polygon representing the grass using a Polygon object
+    # Draw a Polygon representing the mountains using a Polygon object
     grass = Polygon(Point(-20 + i, 20), Point(20 + i, 20), Point(0 + i, 60))
     grass.setFill("grey")
     grass.draw(win)
 
 for i in range(0, 100, 30):
     if i != 60:
-        # Draw a Polygon representing the grass using a Polygon object
+        # Draw a Polygon representing the mountains using a Polygon object
         grass = Polygon(Point(-10 + i, 20), Point(10 + i, 20), Point(0 + i, 50))
         grass.setFill("grey")
         grass.draw(win)
