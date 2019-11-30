@@ -42,9 +42,6 @@ for i in range(0, 100, 30):
         grass.setFill("grey")
         grass.draw(win)
 
-# p1 = win.getMouse()
-# p1.draw(win)
-
 def drawLightning():
     p1 = win.getMouse()
     randX = randrange(0, 100)
