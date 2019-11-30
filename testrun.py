@@ -44,12 +44,12 @@ for i in range(0, 100, 30):
 
 # p1 = win.getMouse()
 # p1.draw(win)
-p2 = win.getMouse()
 
 def drawLightning():
+    p1 = win.getMouse()
     randX = randrange(0, 100)
     randY = randrange(80, 100)
-    line = Line(Point(randX, randY), p2)
+    line = Line(Point(randX, randY), p1)
     line.setFill("pink")
     line.setOutline("pink")
     line.draw(win)
