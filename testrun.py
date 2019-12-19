@@ -63,6 +63,26 @@ def drawLightning():
         line02.setOutline("yellow")
         line02.setWidth(4)
 
+        def recursiveBolt(line_center):
+            # draw the starting point(random from a specific area) and the end point chosen by the user
+            p1 = win.getMouse()
+            randX = randrange(0, 100)
+            randY = randrange(80, 100)
+            line = Line(Point(randX, randY), p1)
+            line.setOutline("yellow")
+            line.setWidth(4)
+
+            line_center = line.getCenter()
+
+            line01 = Line(Point(randX + 5, randY + 5), line_center)
+            line01.setOutline("yellow")
+            line01.setWidth(4)
+
+            line02 = Line(line_center, Point(p1.getX() + 5, p1.getY() + 5))
+            line02.setOutline("yellow")
+            line02.setWidth(4)
+            recursiveBolt(line_center)
+
         line_center01 = line01.getCenter()
         line_center02 = line02.getCenter()
 
@@ -139,7 +159,7 @@ def drawLightning():
         line008.setWidth(4)
         line008.draw(win)
 
-        """
+
         line2 = Line(line_center, Point(p1.getX()+randrange(-10,10), p1.getY()+randrange(-10,10)))
         line2.setOutline("pink")
         line2.setWidth(3)
@@ -158,17 +178,13 @@ def drawLightning():
         line4.setOutline("pink")
         line4.setWidth(1)
         line4.draw(win)
-        """
-
-        def recursiveBranch():
-            asd
 
         # calculate the length of line segment
         sqrt = (abs(randX - p1.getX()) ** 2) + (abs(randY - p1.getY()) ** 2) ** (1 / 2.0)
         print(sqrt / 50)
 
-    # animation speed
-    update(0.000000001)
+        # animation speed
+        update(0.9)
 
 
 drawLightning()
