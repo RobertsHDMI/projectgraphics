@@ -1,19 +1,19 @@
 from tkinter import *
-from background import *
+from testron2 import *
 
-window=Tk()
+win = Tk()
 
-window.title("My weather")
-window.geometry('550x200')
-tk.Label(window, text="Enter season ").grid(row=1)
-box = tk.Entry(window)
+win.title("My weather")
+win.geometry('550x200')
+tk.Label(win, text="Enter season ").grid(row=1)
+box = tk.Entry(win)
 box.grid(row=1, column=1)
 
 def displaySeason():
     global box
-    setSeason(box.get())
+    drawLightning(box.get())
 
-btn = Button(window, text="Click Me", bg="blue", fg="white", command=displaySeason)
+btn = Button(win, text="Click Me", bg="blue", fg="white", command=displaySeason)
 btn.grid(row=4, column=4, rowspan=3)
 
-window.mainloop()
+win.mainloop()
