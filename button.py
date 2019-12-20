@@ -1,5 +1,5 @@
 from tkinter import *
-from testron2 import *
+from test import *
 
 win = Tk()
 
