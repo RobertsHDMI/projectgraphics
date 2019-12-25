@@ -1,7 +1,8 @@
 from tkinter import *
 from graphics import *
 from random import randrange
-from die_cast.button import Button
+from lightning.CustomInputLightning import InputDialog
+from lightning.BackgroundBuilder import BackgroundBuilder
 
 # create a 500, 400 window
 win = GraphWin("Lightning", 1200, 600, autoflush=False)
@@ -10,36 +11,20 @@ win = GraphWin("Lightning", 1200, 600, autoflush=False)
 # to (100 , 100) in the upper right .
 win.setCoords(0.0, 0.0, 100, 100)
 
-# Draw a rectangle representing the sky using a Rectangle object
-sky = Rectangle(Point(0, 60), Point(100, 100))
-sky.setFill("blue")
-sky.draw(win)
+background = BackgroundBuilder(win)
 
-for i in range(0, 100, 20):
-    # Draw a series of polygons representing the sky using a Rectangle object, in order to fill up the space
-    # between mountains with sky
-    sky = Polygon(Point(0 + i, 60), Point(20 + i, 60), Point(10 + i, 40))
-    sky.setFill("blue")
-    sky.setOutline("blue")
-    sky.draw(win)
+def dialog():
+    while True:
+        # interact with the user
+        inputwin = InputDialog(2, 2, 2)
+        choice = inputwin.interact()
+        inputwin.close()
 
-# Draw a rectangle representing the grass using a Rectangle object
-grass = Rectangle(Point(0, 0), Point(100, 20))
-grass.setFill("green")
-grass.draw(win)
+        if choice == "Summer":
+            background.changeSeason("Summer")
 
-for i in range(0, 120, 20):
-    # Draw a series of Polygons representing the mountains using a Polygon object
-    grass = Polygon(Point(-20 + i, 20), Point(20 + i, 20), Point(0 + i, 60))
-    grass.setFill("grey")
-    grass.draw(win)
-
-for i in range(0, 100, 30):
-    if i != 60:
-        # Draw a Polygon representing the mountains using a Polygon object
-        grass = Polygon(Point(-10 + i, 20), Point(10 + i, 20), Point(0 + i, 50))
-        grass.setFill("grey")
-        grass.draw(win)
+        if choice == "Winter":
+            background.changeSeason("Winter")
 
 
 def drawLightning():
@@ -159,8 +144,7 @@ def drawLightning():
         line008.setWidth(4)
         line008.draw(win)
 
-
-        line2 = Line(line_center, Point(p1.getX()+randrange(-10,10), p1.getY()+randrange(-10,10)))
+        line2 = Line(line_center, Point(p1.getX() + randrange(-10, 10), p1.getY() + randrange(-10, 10)))
         line2.setOutline("pink")
         line2.setWidth(3)
         line2.draw(win)
@@ -187,6 +171,7 @@ def drawLightning():
         update(0.9)
 
 
+dialog()
 drawLightning()
 
 win.mainloop()
