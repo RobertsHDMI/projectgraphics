@@ -14,6 +14,8 @@ class InputDialog:
         self.summer.activate()
         self.winter = Button(win, Point(2, 4), 4, 2, "Winter")
         self.winter.activate()
+        self.lightning = Button(win, Point(2, 6), 4, 2, "Lightning")
+        self.lightning.activate()
 
     def interact(self):
         """ wait for user to click Quit or Fire button
@@ -24,6 +26,8 @@ class InputDialog:
                 return "Summer"
             if self.winter.clicked(pt):
                 return "Winter"
+            if self.lightning.clicked(pt):
+                return "Lightning"
 
     def close(self):
         """close the input window"""
